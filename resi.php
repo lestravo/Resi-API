@@ -10,7 +10,6 @@
 
 class Resi
 {
-	
 	public function ResiJNE($resi)
 	{
 		$hasil = self::CURL("https://myjne.jne.co.id:10443/jneone/service/animation/popupView", "okhttp/3.8.0", null, null, "userType=0&view=gkeyo4sr52hjicd5f4dkgblpnmico5&height=".self::strReplaceJNE($resi));
