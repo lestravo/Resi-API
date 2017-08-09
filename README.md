@@ -2,9 +2,9 @@
 
 What features?
 -------------
-* JNE AWB Checker
+* JNE AWB Checker (jne.co.id)
+* JET AWB Checker (jet.co.id)
 
 About this project?
 -------------
-This project for my lesson about PHP.
-I do not guarantee this will work continue
+This project for my lesson about PHP. I do not guarantee this will work continue

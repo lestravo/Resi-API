@@ -16,6 +16,12 @@ class Resi
 		return $hasil;
 	}
 
+	public function ResiJET($resi)
+	{
+		$hasil = self::CURL("http://jk.jet.co.id:22234/jandt-app-web/router", "okhttp/3.8.0", null, null, 'method=order.findTrack&data={"appmac":"355782053220095","parameter":"{\"billCode\":\"'.$resi.'\",\"lang\":\"en\"}"}');
+		return $hasil;
+	}
+
 	private function CURL($url, $ua, $ref = null, $header = array(), $post = null)
 	{
         $c = curl_init($url);
@@ -56,6 +62,6 @@ class Resi
 }
 
 $check = new Resi();
-$result = $check->ResiJNE("YOUR-AWB");
+$result = $check->ResiJET("YOUR-AWB");
 header("Content-type:application/json");
 print_r($result[1]);
