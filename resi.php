@@ -16,6 +16,12 @@ class Resi
 		return $hasil;
 	}
 
+    public function ResiTIKI($resi)
+    {
+        $hasil = self::CURL("https://tiki.id/mobile_api/track3/".$resi."", "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:54.0) Gecko/20100101 Firefox/54.0", null, null, null);
+        return $hasil;
+    }
+
 	public function ResiJET($resi)
 	{
 		$hasil = self::CURL("http://jk.jet.co.id:22234/jandt-app-web/router", "okhttp/3.8.0", null, null, 'method=order.findTrack&data={"appmac":"355782053220095","parameter":"{\"billCode\":\"'.$resi.'\",\"lang\":\"en\"}"}');
@@ -62,6 +68,6 @@ class Resi
 }
 
 $check = new Resi();
-$result = $check->ResiJET("YOUR-AWB");
+$result = $check->ResiTIKI("YOUR-AWB");
 header("Content-type:application/json");
 print_r($result[1]);
