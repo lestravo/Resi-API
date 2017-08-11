@@ -70,4 +70,4 @@ class Resi
 $check = new Resi();
 $result = $check->ResiTIKI("YOUR-AWB");
 header("Content-type:application/json");
-print_r($result[1]);
+print_r($result);
